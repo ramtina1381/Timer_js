@@ -1,0 +1,40 @@
+body{
+    background-color: #030334;
+}
+/*fourth take */
+
+*{
+    box-sizing: border-box;
+}
+
+.watch{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    width: 100%;
+    max-width: 360px;
+    margin: 4rem auto;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    flex-wrap: wrap;
+}
+
+.display{
+    margin: 5px;
+    font-size: 4rem;
+}
+.buttons{
+    display: flex;
+
+
+}
+#start{
+    margin: 5px;
+}
+#stop{
+    margin: 5px;
+}
+#reset{
+    margin: 5px;
+}
