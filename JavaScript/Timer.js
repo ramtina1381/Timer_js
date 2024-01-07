@@ -10,11 +10,13 @@ class Clock {
     }
 
     start() {
-        if (this.state === "initial") {
+        if (this.state === "initial" || this.state === "stopped") {
+            this.state = "running";
+            this.timer();
             this.interval = setInterval(() => this.timer(), 1000);
-            this.state = "running"
         }
     }
+
 
     stop() {
         if (this.state ==="running"){
@@ -24,15 +26,13 @@ class Clock {
     }
 
     reset() {
-        this.state = "initial";
         clearInterval(this.interval);
+        this.state = "initial";
         this.seconds = 0;
         this.display.innerText = "00:00:00";
     }
 
     timer() {
-
-
         let hrs = Math.floor(this.seconds / 3600);
         let min = Math.floor((this.seconds - hrs * 3600) / 60);
         let sec = this.seconds % 60;
