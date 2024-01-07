@@ -26,8 +26,6 @@ body{
 }
 .buttons{
     display: flex;
-
-
 }
 #start{
     margin: 5px;
